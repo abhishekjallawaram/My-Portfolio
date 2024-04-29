@@ -131,7 +131,7 @@ b, strong {
   top: 0;
   right: 0;
   left: 0;
-  animation: BottomTotop 6s linear infinite 0s;
+  animation: change 10s linear infinite;
 }
 .animated-item:nth-child(2n+2) {
   animation-delay: 2s;
@@ -614,8 +614,9 @@ b, strong {
 }
 @media (max-width: 320px) {
   .animated-text {
-    margin-top: 0;
-  }
+    overflow: hidden; /* Ensures the content is not revealed until it is animated */
+    white-space: nowrap; /* Keeps the text on a single line */
+}
 
   .about-text {
     text-align: center;
